@@ -1,0 +1,58 @@
+/* Cards */
+
+
+main{
+    display: flex;
+    gap:25px;
+    padding: 10px;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    max-width: 400px; 
+    box-shadow: 1px 3px #88888833;
+   
+}
+
+.card img{
+    min-height: 200px;
+    
+
+}
+.card h4,
+.card div {
+    padding:5px 10px;
+    margin: 0;
+}
+
+.date{
+    display:flex;
+}
+
+.date p{
+    margin:0;
+    
+}
+
+
+
+
+@media all and (min-width:50rem ){
+    main{
+        padding:20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card h4,
+    .card div {
+    padding:5px 0px;
+}
+
+}
+/* --------------------------------------------------------- */
