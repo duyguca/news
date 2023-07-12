@@ -12,7 +12,7 @@
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- my CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
@@ -21,17 +21,15 @@
       <h1>KDK</h1>
       <img class="logo bounce" src="images/newspaper.png" alt="A icon of newspaper">
     </div>
-        <label class="hamburger-menu"> 
-          <input type="checkbox">
-        </label>
-        <aside class="sidebar">
-          <nav>
-            <div>This</div>
-            <div>is</div>
-            <div>the</div>
-            <div>sidebar</div>
-          </nav>
-        </aside>
+
+    <!-- hamburger icon -->
+    <div id="drawer_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- nav menu -->
     <nav class="navbar">
 
       <!-- NEWS -->
@@ -39,14 +37,16 @@
         <button class="dropbtn"><a href="#home">NEWS <i class="fa fa-caret-down"></i></a>
         </button>
         <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+          <ul>
+            <li><a href="#">Top Stories </a></li>
+            <li><a href="#">Local</a></li>
+            <li><a href="#">Climate</a></li>
+            <li><a href="#">World<a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Indigenous</a></li>
+            <li><a href="#">Opinion</a></li>
+          </ul>
         </div>
       </div>
       <!-- SPORTS -->
@@ -54,14 +54,16 @@
         <button class="dropbtn"><a href="#home">SPORTS <i class="fa fa-caret-down"></i></a>
         </button>
         <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+          <ul>
+            <li><a href="#">Top Stories</a></li>
+            <li><a href="#">Local </a></li>
+            <li><a href="#">Climate </a></li>
+            <li><a href="#">World </a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics </a></li>
+            <li><a href="#">Indigenous </a></li>
+            <li><a href="#">Opinion </a></li>
+          </ul>
         </div>
       </div>
       <!-- HEALTH -->
@@ -69,14 +71,16 @@
         <button class="dropbtn"><a href="#home">HEALTH <i class="fa fa-caret-down"></i></a>
         </button>
         <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+          <ul>
+            <li><a href="#">Top Stories </a></li>
+            <li><a href="#">Local </a></li>
+            <li><a href="#">Climate </a></li>
+            <li><a href="#">World </a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics </a></li>
+            <li><a href="#">Indigenous </a></li>
+            <li><a href="#">Opinion </a></li>
+          </ul>
         </div>
       </div>
       <!-- ARTS -->
@@ -84,14 +88,16 @@
         <button class="dropbtn"><a href="#home">ARTS <i class="fa fa-caret-down"></i></a>
         </button>
         <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+          <ul>
+            <li><a href="#">Top Stories</a></li>
+            <li><a href="#">Local </a></li>
+            <li><a href="#">Climate </a></li>
+            <li><a href="#">World </a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics </a></li>
+            <li><a href="#">Indigenous </a></li>
+            <li><a href="#">Opinion </a></li>
+          </ul>
         </div>
       </div>
       <!-- BOOK -->
@@ -99,29 +105,34 @@
         <button class="dropbtn"><a href="#home">BOOK <i class="fa fa-caret-down"></i></a>
         </button>
         <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+          <ul>
+            <li><a href="#">Top Stories </a></li>
+            <li><a href="#">Local </a></li>
+            <li><a href="#">Climate </a></li>
+            <li><a href="#">World </a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics </a></li>
+            <li><a href="#">Indigenous </a></li>
+            <li><a href="#">Opinion </a></li>
+          </ul>
         </div>
       </div>
+
       <!-- FOOD -->
       <div class="dropdown">
         <button class="dropbtn"><a href="#home">FOOD <i class="fa fa-caret-down"></i></a>
         </button>
-        <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+        <div tabindex="0" class="dropdown-content onclick-menu">
+          <ul class="onclick-menu-content">
+            <li><a href="#">Top Stories </a></li>
+            <li><a href="#">Local </a></li>
+            <li><a href="#">Climate </a></li>
+            <li><a href="#">World </a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics </a></li>
+            <li><a href="#">Indigenous </a></li>
+            <li><a href="#">Opinion </a></li>
+          </ul>
         </div>
       </div>
       <!-- TRAVEL -->
@@ -129,16 +140,17 @@
         <button class="dropbtn"><a href="#home">TRAVEL <i class="fa fa-caret-down"></i></a>
         </button>
         <div class="dropdown-content">
-          <a href="#">Top Stories</a>
-          <a href="#">Local</a>
-          <a href="#">Climate</a>
-          <a href="#">World</a>
-          <a href="#">Canada</a>
-          <a href="#">Politics</a>
-          <a href="#">Indigenous</a>
-          <a href="#">Opinion</a>
+          <ul>
+            <li><a href="#">Top Stories </a></li>
+            <li><a href="#">Local </a></li>
+            <li><a href="#">Climate </a></li>
+            <li><a href="#">World </a></li>
+            <li><a href="#">Canada </a></li>
+            <li><a href="#">Politics </a></li>
+            <li><a href="#">Indigenous </a></li>
+            <li><a href="#">Opinion </a></li>
+          </ul>
         </div>
-      </div>
       </div>
       <!-- <input type="text"><i class="fa-solid fa-magnifying-glass search"></i> -->
 
@@ -212,6 +224,15 @@
       <p class="copywrite">&copy; KDK News 2023</p>
     </div>
   </footer>
+  <!-- 1-jQuery 2-Bootstrap 3-my script-->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

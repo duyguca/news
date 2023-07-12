@@ -3,12 +3,10 @@
     --color2: #fff8c5;
     --foreground: #333;
     --poppins: 'Poppins', sans-serif;
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
 }
 body {
   font-family: var(--poppins);
+  margin: 0;
 }
 
 /* header */
@@ -43,44 +41,138 @@ h1 {
 100% { transform: translateY(0); }
 }
 
+/* hamburger icon */
+
+#drawer_toggle {
+  z-index: 200;
+box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+#drawer_toggle span {
+  position: absolute;
+  top: 19px;
+  left: 17px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  vertical-align: top;
+}
+#drawer_toggle span:nth-child(2) {
+  margin-top: 10px;
+}
+#drawer_toggle span:last-child {
+  margin-top: 20px;
+}
+#drawer_toggle.open span {
+  top: 29px;
+  left: 14px;
+  width: 35px;
+  margin: 0;
+}
+#drawer_toggle.open span:first-child {
+  transform: rotate(45deg);
+}
+#drawer_toggle.open span:nth-child(2) {
+  display: none;
+}
+#drawer_toggle.open span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* end of hanburger icon */
 
 /* hamburger menu */
-*, 
-*::after, 
-*::before {
+header nav {
   box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 60px);
+  display: block;
+  right: -100%;
+  transition: right .5s;
+}
+header nav.sp_open {
+  right: 0;
 }
 
-.hamburger-menu {
+.navbar {
+  background-color: var(--color2);
+  opacity: 95%;
   display: flex;
   flex-direction: column;
-  gap: var(--hamburger-gap);
-  /* background-color: var(--foreground);
-  border-radius: 9999px;
-  pointer-events: none; */
+  text-align: center;
 }
 
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-  content: "";
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background-color: var(--foreground);
-  border-radius: 9999px;
-}
-
-.hamburger-menu input {
-  appearance: none;
-  padding: 0; 
-  margin: 0;
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
   outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: var(--poppins);
+  padding: 0;
+  margin: 2rem;
+}
+
+.navbar button a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar a {
+  color: black;
+}
+
+header nav ul {
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header nav ul li a {
+  list-style: none;
+  display: none;
+  padding: 25px;
+  border-radius: 5px;
+  color: #212121;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* slide down submenu */
+.onclick-menu:focus {
+  /* clicking on label should toggle the menu */
   pointer-events: none;
 }
 
-.hamburger-menu input:checked {
-  background-color: red;
+.onclick-menu:focus .onclick-menu-content {
+  /*  opacity is 1 in opened state (see below) */
+  opacity: 1;
+  visibility: visible;
+  display: inherit;
+  /* don't let pointer-events affect descendant elements */
+  pointer-events: auto;
 }
+
+.onclick-menu-content {
+ /* use opacity to fake immediate toggle */
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
+
+/* end of hanburger menu */
 
   /* footer */
   .footer-wrap{
@@ -139,27 +231,34 @@ h1 {
 }
 
 @media (min-width: 700px) {
-.basicFooter {
-  width: 80%;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
-  }
+/* hamburger menu disable */
+#drawer_toggle {
+  display: none;
+}
 /* navigation menu */
 .navbar {
+  height: 9vh;
+  position: relative;
   overflow: hidden;
-  background-color: #EF2042;
+  background-color: var(--color);
+  right: 0; 
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.navbar button a {
+  font-size: 1rem;
+  padding: 14px 10px;
+  margin: 0;
+  text-align: left;
 }
 
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-weight: 600;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-}
-a {
-  margin: 0;
 }
 
 .dropdown {
@@ -179,7 +278,7 @@ a {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #fff8c5;
+  background-color: var(--color2);
   color: black;
 }
 
@@ -209,17 +308,16 @@ a {
   display: block;
 }
 
-.search {
-  color: white;
-}
-input {
-  margin: 1rem .25rem 0 0;
-}
 }
 @media (min-width: 960px) {
   .basicFooter {
     width: 90%;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+.basicFooter {
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
   }
 }
