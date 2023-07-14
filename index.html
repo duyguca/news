@@ -17,145 +17,66 @@
 
 <body>
   <header>
-    <div class="title">
-      <h1>KDK</h1>
-      <img class="logo bounce" src="images/newspaper.png" alt="A icon of newspaper">
-    </div>
-
-    <!-- hamburger icon -->
-    <div id="drawer_toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- nav menu -->
-    <nav class="navbar">
-
-      <!-- NEWS -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">NEWS <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Top Stories </a></li>
-            <li><a href="#">Local</a></li>
-            <li><a href="#">Climate</a></li>
-            <li><a href="#">World<a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Indigenous</a></li>
-            <li><a href="#">Opinion</a></li>
-          </ul>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="title">
+          <h1><a href="#!">Kdk</a></h1>
+          <img class="logo bounce" src="images/newspaper.png" alt="A icon of newspaper">
         </div>
-      </div>
-      <!-- SPORTS -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">SPORTS <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Top Stories</a></li>
-            <li><a href="#">Local </a></li>
-            <li><a href="#">Climate </a></li>
-            <li><a href="#">World </a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics </a></li>
-            <li><a href="#">Indigenous </a></li>
-            <li><a href="#">Opinion </a></li>
+        <nav>
+          <div class="nav-mobile"><a id="nav-toggle" href="#!">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a></div>
+          <ul class="nav-list">
+            <li>
+              <a href="#!">News</a>
+            </li>
+            <li>
+              <a href="#!">Sports</a>
+            </li>
+            <li>
+              <a href="#!">Health <i class="fa fa-caret-down"><i class="fa-solid fa-caret-right" style="display:none"></i></i></a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#!">Top Stories</a>
+                </li>
+                <li>
+                  <a href="#!">Local</a>
+                </li>
+                <li>
+                  <a href="#!">World</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Arts</a>
+            </li>
+            <li>
+              <a href="#!">Book <i class="fa fa-caret-down"><i class="fa-solid fa-caret-right" style="display:none"></i></i></a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#!">Top Stories</a>
+                </li>
+                <li>
+                  <a href="#!">Local</a>
+                </li>
+                <li>
+                  <a href="#!">World</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Food</a>
+            </li>
+            <li>
+              <a href="#!">Travel</a>
+            </li>
           </ul>
-        </div>
+        </nav>
       </div>
-      <!-- HEALTH -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">HEALTH <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Top Stories </a></li>
-            <li><a href="#">Local </a></li>
-            <li><a href="#">Climate </a></li>
-            <li><a href="#">World </a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics </a></li>
-            <li><a href="#">Indigenous </a></li>
-            <li><a href="#">Opinion </a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- ARTS -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">ARTS <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Top Stories</a></li>
-            <li><a href="#">Local </a></li>
-            <li><a href="#">Climate </a></li>
-            <li><a href="#">World </a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics </a></li>
-            <li><a href="#">Indigenous </a></li>
-            <li><a href="#">Opinion </a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- BOOK -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">BOOK <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Top Stories </a></li>
-            <li><a href="#">Local </a></li>
-            <li><a href="#">Climate </a></li>
-            <li><a href="#">World </a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics </a></li>
-            <li><a href="#">Indigenous </a></li>
-            <li><a href="#">Opinion </a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- FOOD -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">FOOD <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div tabindex="0" class="dropdown-content onclick-menu">
-          <ul class="onclick-menu-content">
-            <li><a href="#">Top Stories </a></li>
-            <li><a href="#">Local </a></li>
-            <li><a href="#">Climate </a></li>
-            <li><a href="#">World </a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics </a></li>
-            <li><a href="#">Indigenous </a></li>
-            <li><a href="#">Opinion </a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- TRAVEL -->
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#home">TRAVEL <i class="fa fa-caret-down"></i></a>
-        </button>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Top Stories </a></li>
-            <li><a href="#">Local </a></li>
-            <li><a href="#">Climate </a></li>
-            <li><a href="#">World </a></li>
-            <li><a href="#">Canada </a></li>
-            <li><a href="#">Politics </a></li>
-            <li><a href="#">Indigenous </a></li>
-            <li><a href="#">Opinion </a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- <input type="text"><i class="fa-solid fa-magnifying-glass search"></i> -->
-
-
-    </nav>
+    </section>
   </header>
   <main>
     <p>
